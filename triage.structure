@@ -1,0 +1,39 @@
+# SQLiteManager Dump
+# Version: 1.2.4
+# http://www.sqlitemanager.org/
+#
+# Host: localhost:8888
+# Generation Time: Wednesday 12th 2011f October 2011 04:25 pm
+# SQLite Version: 3.7.4
+# PHP Version: 5.3.6
+# Database: triage.sqlite
+# --------------------------------------------------------
+
+#
+# Table structure for table: links
+#
+CREATE TABLE 'links' ( 'uid' INTEGER NOT NULL PRIMARY KEY, 'url' VARCHAR(200) NOT NULL, 'title' VARCHAR(100) NOT NULL, 'triage_id' INT(11) NOT NULL );
+# --------------------------------------------------------
+
+
+#
+# Table structure for table: sessions
+#
+CREATE TABLE 'sessions' ( 'tid' INTEGER NOT NULL PRIMARY KEY, 'subject' varchar(100) NOT NULL , 'date' datetime NOT NULL , 'curr_uid' int(11) NOT NULL );
+# --------------------------------------------------------
+
+
+#
+# User Defined Function properties: md5rev
+#
+/*
+function md5_and_reverse($string) { return strrev(md5($string)); }
+*/
+
+#
+# User Defined Function properties: IF
+#
+/*
+function sqliteIf($compare, $good, $bad){ if ($compare) { return $good; } else { return $bad; } }
+*/
+
